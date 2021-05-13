@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    environment {
-        PATH = "/opt/apache-maven-3.6.3/bin:$PATH"
-    }
+   // environment {
+   //     PATH = "/opt/apache-maven-3.6.3/bin:$PATH"
+   // }
     stages {
         stage("clone code"){
             steps{
@@ -10,6 +10,10 @@ pipeline {
             }
         }
         stage("build code"){
+             tools {
+                   maven "Maven3"
+                }
+
             steps{
               sh "mvn clean install"
             }
