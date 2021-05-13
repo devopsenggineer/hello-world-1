@@ -4,11 +4,11 @@ pipeline {
    //     PATH = "/opt/apache-maven-3.6.3/bin:$PATH"
    // }
     stages {
-        stage("clone code"){
-            steps{
-               git credentialsId: 'git_credentials', url: 'https://github.com/ravdy/hello-world.git'
-            }
-        }
+//        stage("clone code"){
+//            steps{
+//               git credentialsId: 'git_credentials', url: 'https://github.com/devopsenggineer/hello-world-1.git'
+//            }
+//        }
         stage("build code"){
              tools {
                    maven "Maven3"
